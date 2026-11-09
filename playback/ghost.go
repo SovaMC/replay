@@ -68,6 +68,7 @@ func metadata(g *ghost) protocol.EntityMetadata {
 	if g.player {
 		m.SetFlag(protocol.EntityDataKeyFlags, protocol.EntityDataFlagAlwaysShowName)
 		m.SetFlag(protocol.EntityDataKeyFlags, protocol.EntityDataFlagShowName)
+		m[protocol.EntityDataKeyAlwaysShowNameTag] = uint8(1)
 	}
 	if g.sneaking {
 		m.SetFlag(protocol.EntityDataKeyFlags, protocol.EntityDataFlagSneaking)
